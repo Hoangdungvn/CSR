@@ -1,0 +1,46 @@
+@font-face {
+  font-family: 'OpenSansBold';
+  src: url('../fonts/Opensan/OpenSans-Bold.eot');
+  src: url('../fonts/Opensan/OpenSans-Bold.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Opensan/OpenSans-Bold.woff2') format('woff2'),
+       url('../fonts/Opensan/OpenSans-Bold.woff') format('woff'),
+       url('../fonts/Opensan/OpenSans-Bold.ttf') format('truetype'),
+       url('../fonts/Opensan/OpenSans-Bold.svg#OpenSansBold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'OpenSans';
+  src: url('../fonts/Opensan/OpenSans-Regular.eot');
+  src: url('../fonts/Opensan/OpenSans-Regular.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Opensan/OpenSans-Regular.woff2') format('woff2'),
+       url('../fonts/Opensan/OpenSans-Regular.woff') format('woff'),
+       url('../fonts/Opensan/OpenSans-Regular.ttf') format('truetype'),
+       url('../fonts/Opensan/OpenSans-Regular.svg#OpenSansBold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'able';
+  src: url('../fonts/Able/Abel-Regular.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Able/Abel-Regular.otf')  format('opentype'),
+       url('../fonts/Able/Abel-Regular.woff') format('woff'),
+       url('../fonts/Able/Abel-Regular.ttf')  format('truetype'),
+       url('../fonts/Able/Abel-Regular.svg#able') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'gotham-bold';
+  src: url('../fonts/Gothambold/gotham_bold.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Gothambold/gotham-bold.otf')  format('opentype'),
+       url('../fonts/Gothambold/gotham-bold.woff') format('woff'),
+       url('../fonts/Gothambold/gotham-bold.ttf')  format('truetype'),
+       url('../fonts/Gothambold/gotham-bold.svg#able') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
