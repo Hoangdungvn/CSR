@@ -577,12 +577,13 @@
                 onSlideClick: function () {
                     //When click to tile in top slider, go to and set active to slide is clicked
                     mySwiper.swipeTo(mySwiper.clickedSlideIndex);
+                    change_sub_slider(mySwiper.clickedSlideIndex);
                 },
 
-                onSlideChangeEnd: function () {
+                onTouchEnd: function () {
                     //When swipe slider, go to and set active for center slide
                     // And change content of active slide
-                    change_sub_slider(mySwiper.clickedSlideIndex)
+                    change_sub_slider(mySwiper.activeIndex);
                 }
             });
 

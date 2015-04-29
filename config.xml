@@ -6,8 +6,18 @@
         version     = "1.0.0" >
 
     <!-- versionCode is optional and Android only -->
-
     <name>CSR App</name>
+
+    <preference name="orientation" value="landscape" />
+
+    <!-- iPad -->
+    <icon src="icon-76.png" gap:platform="ios" width="76" height="76" />
+    <icon src="icon-76@2x.png" gap:platform="ios" width="152" height="152" />
+
+    <!-- iPad -->
+    <gap:splash src="Default-Portrait.png" gap:platform="ios" width="768" height="1024" />
+    <gap:splash src="Default-Landscape.png" gap:platform="ios" width="1024" height="768" />
+
 
     <description>
         An app on iPad.
