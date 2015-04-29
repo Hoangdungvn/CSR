@@ -207,7 +207,7 @@ var Swiper = function (selector, params) {
         //Namespace
         slideElement: 'div',
         slideClass: 'swiper-slide',
-        slideActiveClass: 'swiper-slide-active',
+        slideActiveClass: 'old-active',
         slideVisibleClass: 'swiper-slide-visible',
         slideDuplicateClass: 'swiper-slide-duplicate',
         wrapperClass: 'swiper-wrapper',
@@ -229,7 +229,6 @@ var Swiper = function (selector, params) {
         }
     }
     _this.params = params;
-    console.dir(params);
     if (params.scrollContainer) {
         params.freeMode = true;
         params.freeModeFluid = true;

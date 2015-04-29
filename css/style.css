@@ -252,9 +252,10 @@ a:focus {
 .top-slide.swiper-container {
   height: 180px;
   margin-bottom: 0px;
-  width: 100%;
+  width: 100%  !important;
   padding-right: 0;
   top: -14px;
+  left: 0;
 }
 .top-slide .slide-item {
   margin: 20px 5px 50px 5px;

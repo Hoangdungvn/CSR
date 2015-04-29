@@ -330,7 +330,7 @@
                 <h4 class="modal-title" id="myModalLabel">&nbsp;</h4>
             </div>
             <div class="modal-body">
-                <div class=" top-slide swiper-container">
+                <div class=" top-slide swiper-container" dir="rtl">
                     <div class="swiper-wrapper">
                         <div class="slide-item swiper-slide red-slide">
                             <div class="tile-img">
@@ -343,7 +343,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="slide-item swiper-slide blue-slide">
+                        <div class="slide-item swiper-slide  ">
                             <div class="tile-img">
                                 <div class="front">
                                     <a><img
@@ -355,7 +355,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="slide-item swiper-slide orange-slide">
+                        <div class="slide-item swiper-slide ">
                             <div class="tile-img">
                                 <div class="front">
                                     <a><img
@@ -367,7 +367,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="slide-item swiper-slide orange-slide">
+                        <div class="slide-item swiper-slide ">
                             <div class="tile-img">
                                 <div class="front">
                                     <a><img
@@ -379,7 +379,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="slide-item swiper-slide orange-slide">
+                        <div class="slide-item swiper-slide ">
                             <div class="tile-img">
                                 <div class="front">
                                     <a><img
@@ -391,7 +391,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="slide-item swiper-slide orange-slide">
+                        <div class="slide-item swiper-slide ">
                             <div class="tile-img">
                                 <div class="front">
                                     <a><img
@@ -403,7 +403,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="slide-item swiper-slide orange-slide">
+                        <div class="slide-item swiper-slide ">
                             <div class="tile-img">
                                 <div class="front">
                                     <a><img
@@ -415,7 +415,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="slide-item swiper-slide orange-slide">
+                        <div class="slide-item swiper-slide ">
                             <div class="tile-img">
                                 <div class="front">
                                     <a><img
@@ -427,7 +427,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="slide-item swiper-slide orange-slide">
+                        <div class="slide-item swiper-slide ">
                             <div class="tile-img">
                                 <div class="front">
                                     <a><img
@@ -439,7 +439,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="slide-item swiper-slide orange-slide">
+                        <div class="slide-item swiper-slide ">
                             <div class="tile-img">
                                 <div class="front">
                                     <a><img
@@ -451,7 +451,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="slide-item swiper-slide orange-slide">
+                        <div class="slide-item swiper-slide ">
                             <div class="tile-img">
                                 <div class="front">
                                     <a><img
@@ -463,7 +463,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="slide-item swiper-slide orange-slide">
+                        <div class="slide-item swiper-slide ">
                             <div class="tile-img">
                                 <div class="front">
                                     <a><img
@@ -563,30 +563,36 @@
 
             //Initial top slide
             var mySwiper = new Swiper('.top-slide', {
-                paginationClickable: true,
                 slidesPerView: 8,
-                centeredSlides: true,
-                loop: false,
                 initialSlide: (tile_id - 1),
-
-                onInit: function () {
+                //setWrapperSize:false,
+                //slideToClickedSlide:false,
+                //scrollContainer:false,
+//                swipeToPrev:false,
+//                swipeToNext:false,
+                onInit: function (s) {
                     //When top slider init done, change content related to that tile
-                    change_sub_slider(tile_id - 1)
+                    change_sub_slider(tile_id - 1);
+                    $('.top-slide .slide-item').removeClass('swiper-slide-active');
+                    s.getSlide(tile_id-1).classList.add('swiper-slide-active');
+                    s.swipeTo(tile_id-1);
                 },
-
                 onSlideClick: function () {
                     //When click to tile in top slider, go to and set active to slide is clicked
-                    mySwiper.swipeTo(mySwiper.clickedSlideIndex);
+
+                    $('.top-slide .slide-item').removeClass('swiper-slide-active')
+                    mySwiper.clickedSlide.classList.add('swiper-slide-active');
                     change_sub_slider(mySwiper.clickedSlideIndex);
-                },
-
-                onTouchEnd: function () {
-                    //When swipe slider, go to and set active for center slide
-                    // And change content of active slide
-                    change_sub_slider(mySwiper.activeIndex);
                 }
-            });
 
+//                ,
+//
+//                onTouchEnd: function () {
+//                    //When swipe slider, go to and set active for center slide
+//                    // And change content of active slide
+//                    change_sub_slider(mySwiper.activeIndex);
+//                }
+            });
             //Initial content slider when Modal Shown
             var sub_mySwiper = new Swiper('.sub-slider', {
                 pagination: '.sub-pagination',
