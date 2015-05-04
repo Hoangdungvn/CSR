@@ -9,6 +9,7 @@
 
     <!--jQuery-->
     <script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/ui/1.11.3/jquery-ui.min.js"></script>
     <!--End jQuery-->
     <script src="js/jquery.mobile-1.4.2.min.js"></script>
     <!--Bootstrap-->
@@ -483,53 +484,56 @@
 
 
                 <div class="tile-content">
-                    <div class="sub-slider  swiper-container fl ">
-                        <div class="swiper-wrapper">
-                            <div class="sub-slider-item slide-item swiper-slide">
-                                <img src="images/sample-pic-1.jpg" alt=""/>
+                    <div class="in-content">
+                        <div class="sub-slider  swiper-container fl ">
+                            <div class="swiper-wrapper">
+                                <div class="sub-slider-item slide-item swiper-slide">
+                                    <img src="images/sample-pic-1.jpg" alt=""/>
+                                </div>
+                                <div class="sub-slider-item slide-item swiper-slide">
+                                    <img src="images/sample-pic-1.jpg" alt=""/>
+                                </div>
+                                <div class="sub-slider-item slide-item swiper-slide">
+                                    <img src="images/sample-pic-1.jpg" alt=""/>
+                                </div>
+                                <div class="sub-slider-item slide-item swiper-slide">
+                                    <img src="images/sample-pic-1.jpg" alt=""/>
+                                </div>
+                                <div class="sub-slider-item slide-item swiper-slide">
+                                    <img src="images/sample-pic-1.jpg" alt=""/>
+                                </div>
+
                             </div>
-                            <div class="sub-slider-item slide-item swiper-slide">
-                                <img src="images/sample-pic-1.jpg" alt=""/>
-                            </div>
-                            <div class="sub-slider-item slide-item swiper-slide">
-                                <img src="images/sample-pic-1.jpg" alt=""/>
-                            </div>
-                            <div class="sub-slider-item slide-item swiper-slide">
-                                <img src="images/sample-pic-1.jpg" alt=""/>
-                            </div>
-                            <div class="sub-slider-item slide-item swiper-slide">
-                                <img src="images/sample-pic-1.jpg" alt=""/>
-                            </div>
+                            <div class="sub-pagination"></div>
 
                         </div>
-                        <div class="sub-pagination"></div>
+                        <div class="texture-text fr">
+                            <p>
+                                Textured panels offer a truely unique residential facade solution with a depth of colour
+                                that is unmatched in the Australian market.
+                            </p>
 
+                            <p>
+                                Available in three different tones; Alpine, Sandstone and EbonyPre-finished panels
+                                compliment colour schemes
+                            </p>
+
+                            <p>
+                                Offering a unique point of difference to any home.
+
+                            </p>
+                        </div>
+                        <a href="mailto:test@gmail.com" class="email-link">
+                            <i class="email-icon">
+
+                            </i>
+                            Email Product Information
+
+                        </a>
+
+                        <div class="clear"></div>
                     </div>
-                    <div class="texture-text fr">
-                        <p>
-                            Textured panels offer a truely unique residential facade solution with a depth of colour
-                            that is unmatched in the Australian market.
-                        </p>
 
-                        <p>
-                            Available in three different tones; Alpine, Sandstone and EbonyPre-finished panels
-                            compliment colour schemes
-                        </p>
-
-                        <p>
-                            Offering a unique point of difference to any home.
-
-                        </p>
-                    </div>
-                    <a href="mailto:test@gmail.com" class="email-link">
-                        <i class="email-icon">
-
-                        </i>
-                        Email Product Information
-
-                    </a>
-
-                    <div class="clear"></div>
                 </div>
             </div>
 
@@ -541,7 +545,7 @@
 
 
     function change_sub_slider(slider_number) {
-
+        $('.tile-content').hide();
         //Change content when change active tile in top slider
         $('.texture-text').html(" <p>Textured panels offer a truely unique residential facade solution with a depth of colour that is unmatched in the Australian market. </p>")
 
@@ -553,6 +557,7 @@
 
         $('.sub-slider .swiper-wrapper').html('<div class="sub-slider-item slide-item swiper-slide"><img src="images/sub-slide2.jpg" alt=""/></div>');
         $('.sub-slider .swiper-wrapper').html($('.sub-slider .swiper-wrapper').html() + '<div class="sub-slider-item slide-item swiper-slide"><img src="images/sample-pic-1.jpg" alt=""/></div>');
+        $('.tile-content').show('slide', { direction: 'right' }, 500);
 
         //Reset content slider
         sub_mySwiper = new Swiper('.sub-slider', {

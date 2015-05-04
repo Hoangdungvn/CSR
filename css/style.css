@@ -240,6 +240,8 @@ a:focus {
 }
 .modal-dialog .modal-body .tile-content {
   background-color: #ffffff;
+}
+.modal-dialog .modal-body .tile-content .in-content {
   padding: 25px 20px 20px 20px;
 }
 .modal-dialog .modal-body .texture-text {
