@@ -245,6 +245,7 @@ a:focus {
   width: 255px;
   font-family: "OpenSans", Arial, Helvetica, sans-serif;
   font-size: 16px;
+  padding-left: 10px;
 }
 .modal-open .modal {
   overflow: hidden;
@@ -258,7 +259,7 @@ a:focus {
   left: 0;
 }
 .top-slide .slide-item {
-  margin: 20px 5px 50px 5px;
+  margin: 22px 5px 50px 10px;
   width: 102px !important;
   height: 99px !important;
   display: block;
@@ -280,7 +281,7 @@ a:focus {
 }
 .top-slide .slide-item.swiper-slide-active .tile-img {
   position: absolute;
-  top: 10px;
+  top: 13px;
 }
 .top-slide .slide-item.swiper-slide-active .tile-img img {
   height: 120px;

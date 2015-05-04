@@ -73,11 +73,11 @@
                             </div>
 
                             <ul class="social-list">
-                                <li class="social-icon"><a href=""><img src="images/pinterest.png" alt=""/></a></li>
-                                <li class="social-icon"><a href=""><img src="images/facebook.png" alt=""/></a></li>
-                                <li class="social-icon"><a href=""><img src="images/twiter.png" alt=""/></a></li>
-                                <li class="social-icon"><a href=""><img src="images/youtube.png" alt=""/></a></li>
-                                <li class="social-icon"><a href=""><img src="images/linkedin.png" alt=""/></a></li>
+                                <li class="social-icon"><a href="#"><img src="images/pinterest.png" alt=""/></a></li>
+                                <li class="social-icon"><a href="#"><img src="images/facebook.png" alt=""/></a></li>
+                                <li class="social-icon"><a href="#"><img src="images/twiter.png" alt=""/></a></li>
+                                <li class="social-icon"><a href="#"><img src="images/youtube.png" alt=""/></a></li>
+                                <li class="social-icon"><a href="#"><img src="images/linkedin.png" alt=""/></a></li>
                             </ul>
 
                         </div>
@@ -115,7 +115,7 @@
                                 </div>
                             </li>
 
-                            <li class="item">
+                            <li class="item  click panel">
                                 <span class="title-tile">Textured Alpine</span>
 
                                 <div class="tile-img">
@@ -521,7 +521,7 @@
 
                         </p>
                     </div>
-                    <a href="#" class="email-link">
+                    <a href="mailto:test@gmail.com" class="email-link">
                         <i class="email-icon">
 
                         </i>
@@ -543,9 +543,15 @@
     function change_sub_slider(slider_number) {
 
         //Change content when change active tile in top slider
-        $('.texture-text').html(" This is content of tile: " + slider_number);
+        $('.texture-text').html(" <p>Textured panels offer a truely unique residential facade solution with a depth of colour that is unmatched in the Australian market. </p>")
+
+        $('.texture-text').html($('.texture-text').html() + "<p>Available in three different tones; Alpine, Sandstone and EbonyPre-finished panels compliment colour schmes</p>");
+
+        $('.texture-text').html($('.texture-text').html() + "<p>Offering a unique point of difference to any home.</p>");
+
         $('.sub-slider').html('<div class="swiper-wrapper"></div><div class="sub-pagination"></div>');
-        $('.sub-slider .swiper-wrapper').html('<div class="sub-slider-item slide-item swiper-slide"><img src="images/sample-pic-1.jpg" alt=""/></div>');
+
+        $('.sub-slider .swiper-wrapper').html('<div class="sub-slider-item slide-item swiper-slide"><img src="images/sub-slide2.jpg" alt=""/></div>');
         $('.sub-slider .swiper-wrapper').html($('.sub-slider .swiper-wrapper').html() + '<div class="sub-slider-item slide-item swiper-slide"><img src="images/sample-pic-1.jpg" alt=""/></div>');
 
         //Reset content slider
@@ -563,19 +569,15 @@
 
             //Initial top slide
             var mySwiper = new Swiper('.top-slide', {
-                slidesPerView: 8,
+                slidesPerView: 'auto',
                 initialSlide: (tile_id - 1),
-                //setWrapperSize:false,
-                //slideToClickedSlide:false,
-                //scrollContainer:false,
-//                swipeToPrev:false,
-//                swipeToNext:false,
+
                 onInit: function (s) {
                     //When top slider init done, change content related to that tile
                     change_sub_slider(tile_id - 1);
                     $('.top-slide .slide-item').removeClass('swiper-slide-active');
-                    s.getSlide(tile_id-1).classList.add('swiper-slide-active');
-                    s.swipeTo(tile_id-1);
+                    s.getSlide(tile_id - 1).classList.add('swiper-slide-active');
+                    s.swipeTo(tile_id - 1);
                 },
                 onSlideClick: function () {
                     //When click to tile in top slider, go to and set active to slide is clicked
