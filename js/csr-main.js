@@ -327,15 +327,14 @@ function change_sub_slider(slider_number,board_id) {
     }
     $('.texture-text').html(slide_temp['text']);
 
-    $('.sub-slider').html('<div class="swiper-wrapper"></div><div class="sub-pagination"></div>');
-    $('.sub-slider .swiper-wrapper').html('');
+     $('.sub-slider-' + board_id).html('');
     console.dir(slide_temp['slides']);
     if(slide_temp['slides'].length > 0){
         for(var i = 0; i < slide_temp['slides'].length; i++){
             if(board_id==2 && slider_number==0 && i<3){
-                $('.sub-slider-'+board_id+' .swiper-wrapper').append('<div class="sub-slider-item slide-item swiper-slide item-video"><a class="owl-video" href="'+ slide_temp['slides'][i] +'"></a></div>');
+                $('.sub-slider-'+board_id).append('<div class="sub-slider-item slide-item swiper-slide item-video"><a class="owl-video" href="'+ slide_temp['slides'][i] +'"></a></div>');
             }else{
-                $('.sub-slider-'+board_id+' .swiper-wrapper').append('<div class="sub-slider-item slide-item swiper-slide"><img src="images/Board-'+ board_id + '/' + slide_temp['name'] + '/' + slide_temp['slides'][i] +'" alt=""/></div>');
+                $('.sub-slider-'+board_id).append('<div class="sub-slider-item slide-item swiper-slide"><img src="images/Board-'+ board_id + '/' + slide_temp['name'] + '/' + slide_temp['slides'][i] +'" alt=""/></div>');
             }
         }
     }
@@ -343,19 +342,14 @@ function change_sub_slider(slider_number,board_id) {
 
     $('.tile-content').show('slide', { direction: 'right' }, 500);
 
-    //Reset content slider
-    //sub_mySwiper = new Swiper('.sub-slider-'+board_id, {
-    //    pagination: '.sub-slider-'+board_id+' .sub-pagination',
-    //    paginationClickable: true,
-    //    loop: true
-    //});
 
-    var sub_mySwiper = $('.sub-slider-'+board_id+ ' .swiper-wrapper').owlCarousel({
+
+    var sub_mySwiper = $('.sub-slider-'+board_id).owlCarousel({
         items:1,
         loop:true,
         video:true,
-        dots: true
-
+        dots: true,
+        merge:true
     });
 }
 $(document).ready(function () {
@@ -380,7 +374,7 @@ $(document).ready(function () {
         tops.trigger('to.owl.carousel', tile_id - 1);
         change_sub_slider(tile_id-1,1);
 
-        $('.top-slide .tile-img').click(function(){
+        $('.top-carousel-1 .owl-item .tile-img').click(function(){
             var item_number = ($(this).attr('data'));
 
             //console.log(item_number)
@@ -407,12 +401,13 @@ $(document).ready(function () {
         var tops = $('.top-carousel-2').owlCarousel({
             center: true,
             items:9,
+            lazyLoad: true,
             loop:true
         });
-        tops.trigger('to.owl.carousel', tile_id - 1);
+        tops.trigger('to.owl.carousel', [tile_id - 1,0]);
         change_sub_slider(tile_id-1,2);
 
-        $('.top-slide .tile-img').click(function(){
+        $('.top-carousel-2 .owl-item .tile-img').click(function(){
             var item_number = ($(this).attr('data'));
 
 //                console.log(item_number)
@@ -441,26 +436,15 @@ $(document).ready(function () {
             items:9,
             loop:true
         });
-        tops.trigger('to.owl.carousel', tile_id - 1);
+        tops.trigger('to.owl.carousel', [tile_id - 1,0]);
         change_sub_slider(tile_id-1,3);
 
-        $('.top-slide .tile-img').click(function(){
+        $('.top-carousel-3 .owl-item .tile-img').click(function(){
             var item_number = ($(this).attr('data'));
-
-//                console.log(item_number)
             tops.trigger('to.owl.carousel', [item_number - 1,0]);
             change_sub_slider(item_number-1,3);
         });
-
-
-        ////Initial content slider when Modal Shown
-        //var sub_mySwiper_3 = new Swiper('.sub-slider-3', {
-        //    pagination: '.sub-slider-3 .sub-pagination',
-        //    paginationClickable: true,
-        //    centeredSlides: true,
-        //    slidesPerView: 1
-        //});
-    });
+     });
 
 
     //Auto set height to content when page show
