@@ -13,6 +13,8 @@ sub_slides[i]['text'] = "Textured panels offer a truly unique residential facade
 "</ul>"
 ;
 sub_slides[i]['slides'] = new Array();
+sub_slides[i]['slides'][0] = 'showcase-1.jpg';
+sub_slides[i]['slides'][1] = 'showcase-1.jpg';
 
 i++;
 sub_slides[i] = new Array();
@@ -34,6 +36,7 @@ sub_slides[i]['text'] = "With an ultra-modern aesthetic,  iCube will look stunni
 ;
 sub_slides[i]['slides'] = new Array();
 sub_slides[i]['slides'][0] = 'showcase-1.jpg';
+sub_slides[i]['slides'][1] = 'showcase-1.jpg';
 
 i++;
 sub_slides[i] = new Array();
@@ -41,6 +44,7 @@ sub_slides[i]['name'] = 'smooth-mocha';
 sub_slides[i]['text'] = "";
 sub_slides[i]['slides'] = new Array();
 sub_slides[i]['slides'][0] = 'showcase-1.jpg';
+sub_slides[i]['slides'][1] = 'showcase-1.jpg';
 
 i++;
 sub_slides[i] = new Array();
@@ -153,6 +157,7 @@ sub_slides[i]['text'] = "";
 sub_slides[i]['name'] = 'textured-ebony';
 sub_slides[i]['slides'] = new Array();
 sub_slides[i]['slides'][0] = 'showcase-1.jpg';
+sub_slides[i]['slides'][1] = 'showcase-1.jpg';
 
 
 
@@ -190,6 +195,7 @@ sub_slides_2[i]['name'] = 'mosaic-cladding';
 sub_slides_2[i]['text'] = "Cemintel Mosaic™ combines a modern, geometric expressed joint aesthetic with the ease of installation of an advanced lightweight fibre cement panel and batten system, making it the ideal facade for the modern home.";
 sub_slides_2[i]['slides'] = new Array();
 sub_slides_2[i]['slides'][0] = 'showcase-1.jpg';
+sub_slides_2[i]['slides'][1] = 'showcase-1.jpg';
 
 i++;
 sub_slides_2[i] = new Array();
@@ -229,6 +235,7 @@ sub_slides_2[i]['name'] = 'headland-weatherboard';
 sub_slides_2[i]['text'] = "Headland Weatherboard has a sharp edged, linear recess. This profile is fixed in the traditional step pattern, making the installation of the external sheets simple. The 25mm overlap provided by Headland ensures fixings are concealed, resulting in a modern, attractive finish.";
 sub_slides_2[i]['slides'] = new Array();
 sub_slides_2[i]['slides'][0] = 'showcase-1.jpg';
+sub_slides_2[i]['slides'][1] = 'showcase-1.jpg';
 
 i++;
 sub_slides_2[i] = new Array();
@@ -244,6 +251,7 @@ sub_slides_2[i]['name'] = 'rendaline';
 sub_slides_2[i]['text'] = "RendaLine™ is a monolithic facade system that incorporates all the advantages of lightweight construction with a flush-jointed texture coat finish. RendaLine™ is a strong, durable weatherproof facade system.";
 sub_slides_2[i]['slides'] = new Array();
 sub_slides_2[i]['slides'][0] = 'showcase-1.jpg';
+sub_slides_2[i]['slides'][1] = 'showcase-1.jpg';
 
 i++;
 sub_slides_2[i] = new Array();
@@ -259,6 +267,8 @@ sub_slides_2[i] = new Array();
 sub_slides_2[i]['name'] = 'silhousette';
 sub_slides_2[i]['text'] = "TBA";
 sub_slides_2[i]['slides'] = new Array();
+sub_slides_2[i]['slides'][0] = 'showcase-1.jpg';
+sub_slides_2[i]['slides'][1] = 'showcase-1.jpg';
 
 
 var sub_slides_3 = new Array();
@@ -268,6 +278,7 @@ sub_slides_3[i]['name'] = 'ceminseal';
 sub_slides_3[i]['text'] = "CeminSeal wallboard features an embedded microwaterblock technology that prevents water from penetrating into the sheet, repelling water & providing stronger joints. CeminSeal is ideal for areas such as the bathroom, laundry and semi-exposed ceilings.";
 sub_slides_3[i]['slides'] = new Array();
 sub_slides_3[i]['slides'][0] = 'showcase-1.jpg';
+sub_slides_3[i]['slides'][1] = 'showcase-1.jpg';
 
 i++;
 sub_slides_3[i] = new Array();
@@ -275,6 +286,7 @@ sub_slides_3[i]['name'] = 'constructafloor';
 sub_slides_3[i]['text'] = "ConstructaFloor is an advanced lightweight fibre cement structural flooring system providing protection against moisture in all areas of the home. ConstructaFloor is designed for use in residential and transportable applications.";
 sub_slides_3[i]['slides'] = new Array();
 sub_slides_3[i]['slides'][0] = 'showcase-1.jpg';
+sub_slides_3[i]['slides'][1] = 'showcase-1.jpg';
 
 i++;
 sub_slides_3[i] = new Array();
@@ -289,6 +301,8 @@ sub_slides_3[i] = new Array();
 sub_slides_3[i]['name'] = 'compressed-sheet';
 sub_slides_3[i]['text'] = "Cemintel™ Compressed Sheet is a compressed, autoclaved, cellulose fibre reinforced, cement sheet. Compressed Sheet has a smooth flat surface and a square edge finish.";
 sub_slides_3[i]['slides'] = new Array();
+sub_slides_3[i]['slides'][0] = 'showcase-1.jpg';
+sub_slides_3[i]['slides'][1] = 'showcase-1.jpg';
 
 i++;
 sub_slides_3[i] = new Array();
@@ -300,6 +314,7 @@ sub_slides_3[i]['text'] = "Cemintel™ Cladding Planks provide a lightweight res
 "</ul>";
 sub_slides_3[i]['slides'] = new Array();
 sub_slides_3[i]['slides'][0] = 'showcase-1.jpg';
+sub_slides_3[i]['slides'][1] = 'showcase-1.jpg';
 
 
 
@@ -313,7 +328,7 @@ sub_slides_3[i]['slides'][0] = 'showcase-1.jpg';
 
 
 
-
+var sub_mySwiper = null;
 function change_sub_slider(slider_number,board_id) {
     $('.tile-content').hide();
     //Change content when change active tile in top slider
@@ -325,71 +340,58 @@ function change_sub_slider(slider_number,board_id) {
     if(board_id==3){
         slide_temp = sub_slides_3[slider_number];
     }
-    $('.texture-text').html(slide_temp['text']);
 
-     $('.sub-slider-' + board_id).html('');
-    console.dir(slide_temp['slides']);
-    if(slide_temp['slides'].length > 0){
+
+    $('.texture-text').html(slide_temp['text']);
+    var xxx = Math.floor(Math.random() * 1000006) + 1;
+     $('.tmp-' + board_id).html('');
+     $('.tmp-' + board_id).html('<div class="sub-slider sub-slider-'+ xxx +' fl "></div>');
+
+
+     if(slide_temp['slides'].length > 0){
         for(var i = 0; i < slide_temp['slides'].length; i++){
             if(board_id==2 && slider_number==0 && i<3){
-                $('.sub-slider-'+board_id).append('<div class="sub-slider-item slide-item swiper-slide item-video"><a class="owl-video" href="'+ slide_temp['slides'][i] +'"></a></div>');
+                $('.tmp-' + board_id +' .sub-slider-'+xxx).append('<div class="sub-slider-item slide-item swiper-slide item-video"><a class="owl-video" href="'+ slide_temp['slides'][i] +'"></a></div>');
             }else{
-                $('.sub-slider-'+board_id).append('<div class="sub-slider-item slide-item swiper-slide"><img src="images/Board-'+ board_id + '/' + slide_temp['name'] + '/' + slide_temp['slides'][i] +'" alt=""/></div>');
+                $('.tmp-' + board_id +' .sub-slider-'+xxx).append('<div class="sub-slider-item slide-item swiper-slide"><img src="images/Board-'+ board_id + '/' + slide_temp['name'] + '/' + slide_temp['slides'][i] +'" alt=""/></div>');
             }
         }
     }
-
 
     $('.tile-content').show('slide', { direction: 'right' }, 500);
 
 
 
-    var sub_mySwiper = $('.sub-slider-'+board_id).owlCarousel({
-        items:1,
+      $('.sub-slider-'+xxx).owlCarousel({
         loop:true,
         video:true,
-        dots: true,
-        merge:true
+        items:1,
+        dots: true
     });
 }
 $(document).ready(function () {
-    //Try with owl carousel
-
-    //tops.on('changed.owl.carousel', function(event) {
-    //    console.dir(event.relatedTarget.current());
-    //})
     //When modal 1 show
     $('#myModal').on('shown.bs.modal', function (e) {
         //Get Tile ID that clicked
         var tile_id = $(e.relatedTarget).data('tile-id');
 
         //Try with owl carousel
-        var tops = $('.top-carousel-1').owlCarousel({
+        var tops1 = $('.top-carousel-1').owlCarousel({
             center: true,
             items:9,
-            loop:true,
-            lazyLoad: true
+            loop:true
 
         });
-        tops.trigger('to.owl.carousel', tile_id - 1);
+        tops1.trigger('to.owl.carousel', [tile_id - 1,0]);
         change_sub_slider(tile_id-1,1);
 
         $('.top-carousel-1 .owl-item .tile-img').click(function(){
             var item_number = ($(this).attr('data'));
 
-            //console.log(item_number)
-            tops.trigger('to.owl.carousel', [item_number - 1,0]);
+             tops1.trigger('to.owl.carousel', [item_number - 1,0]);
             change_sub_slider(item_number-1,1);
         });
 
-
-        ////Initial content slider when Modal Shown
-        //var sub_mySwiper_1 = new Swiper('.sub-slider-1', {
-        //    pagination: '.sub-slider-1 .sub-pagination',
-        //    paginationClickable: true,
-        //    centeredSlides: true,
-        //    slidesPerView: 1
-        //});
     });
 
 //When modal 2 show
@@ -401,8 +403,7 @@ $(document).ready(function () {
         var tops = $('.top-carousel-2').owlCarousel({
             center: true,
             items:9,
-            lazyLoad: true,
-            loop:true
+             loop:true
         });
         tops.trigger('to.owl.carousel', [tile_id - 1,0]);
         change_sub_slider(tile_id-1,2);
@@ -416,18 +417,11 @@ $(document).ready(function () {
         });
 
 
-        ////Initial content slider when Modal Shown
-        //var sub_mySwiper_2 = new Swiper('.sub-slider-2', {
-        //    pagination: '.sub-slider-2 .sub-pagination',
-        //    paginationClickable: true,
-        //    centeredSlides: true,
-        //    slidesPerView: 1
-        //});
     });
 
 //When modal 3 show
     $('#myModal-3').on('shown.bs.modal', function (e) {
-        //Get Tile ID that clicked
+        ////Get Tile ID that clicked
         var tile_id = $(e.relatedTarget).data('tile-id');
 
         //Try with owl carousel
