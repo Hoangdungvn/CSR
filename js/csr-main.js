@@ -329,13 +329,13 @@ function change_sub_slider(slider_number,board_id) {
 
     $('.sub-slider').html('<div class="swiper-wrapper"></div><div class="sub-pagination"></div>');
     $('.sub-slider .swiper-wrapper').html('');
-
+    console.dir(slide_temp['slides']);
     if(slide_temp['slides'].length > 0){
         for(var i = 0; i < slide_temp['slides'].length; i++){
             if(board_id==2 && slider_number==0 && i<3){
-                $('.sub-slider .swiper-wrapper').append('<div class="sub-slider-item slide-item swiper-slide" style="background-color: #0e0e0e"><iframe width="100%" height="100%" src="'+ slide_temp['slides'][i] +'" frameborder="0" allowfullscreen></iframe></div>');
+                $('.sub-slider-'+board_id+' .swiper-wrapper').append('<div class="sub-slider-item slide-item swiper-slide item-video"><a class="owl-video" href="'+ slide_temp['slides'][i] +'"></a></div>');
             }else{
-                $('.sub-slider .swiper-wrapper').append('<div class="sub-slider-item slide-item swiper-slide"><img src="images/Board-'+ board_id + '/' + slide_temp['name'] + '/' + slide_temp['slides'][i] +'" alt=""/></div>');
+                $('.sub-slider-'+board_id+' .swiper-wrapper').append('<div class="sub-slider-item slide-item swiper-slide"><img src="images/Board-'+ board_id + '/' + slide_temp['name'] + '/' + slide_temp['slides'][i] +'" alt=""/></div>');
             }
         }
     }
@@ -344,10 +344,19 @@ function change_sub_slider(slider_number,board_id) {
     $('.tile-content').show('slide', { direction: 'right' }, 500);
 
     //Reset content slider
-    sub_mySwiper = new Swiper('.sub-slider-'+board_id, {
-        pagination: '.sub-slider-'+board_id+' .sub-pagination',
-        paginationClickable: true,
-        loop: true
+    //sub_mySwiper = new Swiper('.sub-slider-'+board_id, {
+    //    pagination: '.sub-slider-'+board_id+' .sub-pagination',
+    //    paginationClickable: true,
+    //    loop: true
+    //});
+
+    var sub_mySwiper = $('.sub-slider-'+board_id+ ' .swiper-wrapper').owlCarousel({
+        center: true,
+        items:1,
+        loop:true,
+        video:true,
+        dots: true
+
     });
 }
 $(document).ready(function () {
@@ -376,19 +385,19 @@ $(document).ready(function () {
             var item_number = ($(this).attr('data'));
             $(this).find('.front').css('overflow','hidden');
 
-            console.log(item_number)
+            //console.log(item_number)
             tops.trigger('to.owl.carousel', item_number - 1);
             change_sub_slider(item_number-1,1);
         });
 
 
-        //Initial content slider when Modal Shown
-        var sub_mySwiper_1 = new Swiper('.sub-slider-1', {
-            pagination: '.sub-slider-1 .sub-pagination',
-            paginationClickable: true,
-            centeredSlides: true,
-            slidesPerView: 1
-        });
+        ////Initial content slider when Modal Shown
+        //var sub_mySwiper_1 = new Swiper('.sub-slider-1', {
+        //    pagination: '.sub-slider-1 .sub-pagination',
+        //    paginationClickable: true,
+        //    centeredSlides: true,
+        //    slidesPerView: 1
+        //});
     });
 
 //When modal 2 show
@@ -415,13 +424,13 @@ $(document).ready(function () {
         });
 
 
-        //Initial content slider when Modal Shown
-        var sub_mySwiper_2 = new Swiper('.sub-slider-2', {
-            pagination: '.sub-slider-2 .sub-pagination',
-            paginationClickable: true,
-            centeredSlides: true,
-            slidesPerView: 1
-        });
+        ////Initial content slider when Modal Shown
+        //var sub_mySwiper_2 = new Swiper('.sub-slider-2', {
+        //    pagination: '.sub-slider-2 .sub-pagination',
+        //    paginationClickable: true,
+        //    centeredSlides: true,
+        //    slidesPerView: 1
+        //});
     });
 
 //When modal 3 show
@@ -440,7 +449,6 @@ $(document).ready(function () {
 
         $('.top-slide .tile-img').click(function(){
             var item_number = ($(this).attr('data'));
-            $(this).find('.front').css('overflow','hidden');
 
 //                console.log(item_number)
             tops.trigger('to.owl.carousel', item_number - 1);
@@ -448,13 +456,13 @@ $(document).ready(function () {
         });
 
 
-        //Initial content slider when Modal Shown
-        var sub_mySwiper_3 = new Swiper('.sub-slider-3', {
-            pagination: '.sub-slider-3 .sub-pagination',
-            paginationClickable: true,
-            centeredSlides: true,
-            slidesPerView: 1
-        });
+        ////Initial content slider when Modal Shown
+        //var sub_mySwiper_3 = new Swiper('.sub-slider-3', {
+        //    pagination: '.sub-slider-3 .sub-pagination',
+        //    paginationClickable: true,
+        //    centeredSlides: true,
+        //    slidesPerView: 1
+        //});
     });
 
 
