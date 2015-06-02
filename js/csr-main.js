@@ -384,7 +384,7 @@ $(document).ready(function () {
             var item_number = ($(this).attr('data'));
 
             //console.log(item_number)
-            tops.trigger('to.owl.carousel', item_number - 1);
+            tops.trigger('to.owl.carousel', [item_number - 1,0]);
             change_sub_slider(item_number-1,1);
         });
 
@@ -416,7 +416,7 @@ $(document).ready(function () {
             var item_number = ($(this).attr('data'));
 
 //                console.log(item_number)
-            tops.trigger('to.owl.carousel', item_number - 1);
+            tops.trigger('to.owl.carousel', [item_number - 1,0]);
             change_sub_slider(item_number-1,2);
         });
 
@@ -448,7 +448,7 @@ $(document).ready(function () {
             var item_number = ($(this).attr('data'));
 
 //                console.log(item_number)
-            tops.trigger('to.owl.carousel', item_number - 1);
+            tops.trigger('to.owl.carousel', [item_number - 1,0]);
             change_sub_slider(item_number-1,3);
         });
 
