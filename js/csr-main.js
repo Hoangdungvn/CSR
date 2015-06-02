@@ -351,7 +351,6 @@ function change_sub_slider(slider_number,board_id) {
     //});
 
     var sub_mySwiper = $('.sub-slider-'+board_id+ ' .swiper-wrapper').owlCarousel({
-        center: true,
         items:1,
         loop:true,
         video:true,
