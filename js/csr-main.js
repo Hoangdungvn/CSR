@@ -383,7 +383,6 @@ $(document).ready(function () {
 
         $('.top-slide .tile-img').click(function(){
             var item_number = ($(this).attr('data'));
-            $(this).find('.front').css('overflow','hidden');
 
             //console.log(item_number)
             tops.trigger('to.owl.carousel', item_number - 1);
@@ -416,7 +415,6 @@ $(document).ready(function () {
 
         $('.top-slide .tile-img').click(function(){
             var item_number = ($(this).attr('data'));
-            $(this).find('.front').css('overflow','hidden');
 
 //                console.log(item_number)
             tops.trigger('to.owl.carousel', item_number - 1);
