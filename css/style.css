@@ -72,7 +72,7 @@ a:focus {
   position: absolute;
 }
 .left-board .intro {
-  padding: 19px 195px 54px 19px;
+  padding: 19px 145px 54px 19px;
   color: #ffffff;
 }
 .left-board .intro h1 {
@@ -81,6 +81,7 @@ a:focus {
   font-size: 43px;
   line-height: 40px;
   text-space: 20px;
+  text-transform: uppercase;
   color: #000000;
   margin: 0;
 }
@@ -93,6 +94,15 @@ a:focus {
   color: #000000;
   padding-right: 160px;
   margin-top: 6px;
+}
+.left-board .intro ul {
+  list-style: circle;
+  margin-left: 25px;
+}
+.left-board .intro ul li {
+  font-size: 13px;
+  line-height: 16px;
+  color: #000000;
 }
 .right-board {
   width: 590px;
@@ -132,7 +142,6 @@ a:focus {
 .right-col .thumb-list .item .tile-img {
   width: 101px;
   height: 97px;
-  background-color: #747474;
   display: block;
 }
 .right-col .thumb-list .item .title-tile {
@@ -141,7 +150,7 @@ a:focus {
   text-transform: uppercase;
   display: block;
   height: 10px;
-  line-height: 5px;
+  line-height: 7px;
 }
 .right-col .thumb-list .item .back {
   background-color: #cccccc;
@@ -164,12 +173,12 @@ a:focus {
   font-weight: normal;
 }
 .social-icon {
-  width: 22px;
   height: 22px;
   display: block;
   margin: 1px;
   margin-right: 0;
   margin-bottom: 0;
+  margin-left: 4px;
   float: right;
 }
 .none,
@@ -250,6 +259,13 @@ a:focus {
   font-size: 16px;
   padding-left: 10px;
 }
+.modal-dialog .modal-body .texture-text ul {
+  list-style: circle;
+  padding-left: 25px;
+}
+.board-2-items {
+  width: 420px  ;
+}
 .modal-open .modal {
   overflow: hidden;
 }
@@ -261,42 +277,51 @@ a:focus {
   top: -10px;
   left: 0;
 }
-.top-slide .slide-item {
+.top-slide .owl-item {
   margin: 25px 5px 50px 10px;
   width: 102px !important;
-  height: 99px !important;
+  height: 97px !important;
   display: block;
   background: #cccccc;
 }
-.top-slide .slide-item span {
+.top-slide .owl-item span {
   display: none;
 }
-.top-slide .slide-item.active {
+.top-slide .owl-item.active {
   background: #F6F6F6;
 }
-.top-slide .slide-item.swiper-slide-active {
-  width: 130px !important;
+.top-slide .owl-item.swiper-slide-active {
+  width: 155px !important;
   border: 3px solid #dbdbdb;
   padding: 10px;
   background: transparent;
-  height: 120px !important;
+  height: 150px !important;
   margin-top: 0;
 }
-.top-slide .slide-item.swiper-slide-active .tile-img {
+.top-slide .owl-item.swiper-slide-active .front {
+  max-width: 100%;
+}
+.top-slide .owl-item.swiper-slide-active .tile-img {
   position: absolute;
   top: 13px;
 }
-.top-slide .slide-item.swiper-slide-active .tile-img img {
+.top-slide .owl-item.swiper-slide-active .tile-img img {
   height: 120px;
   width: 130px;
 }
-.top-slide .slide-item.swiper-slide-active .tile-img span {
+.top-slide .owl-item.swiper-slide-active .tile-img span {
   display: block;
   color: #c3c3c4;
   font-size: 18px;
   margin-top: 25px;
   width: 100%;
   text-align: center;
+}
+.top-slide .owl-item .tile-img {
+  overflow: hidden;
+}
+.top-slide .owl-item .tile-img .front {
+  overflow: hidden;
 }
 .sub-slider {
   width: 715px !important;
@@ -373,7 +398,7 @@ a:focus {
 .panel .front {
   float: none;
   position: absolute;
-  top: 10px;
+  top: 15px;
   left: 0;
   z-index: 900;
   width: inherit;
