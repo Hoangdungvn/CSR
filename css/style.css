@@ -82,7 +82,7 @@ a:focus {
   line-height: 40px;
   text-space: 20px;
   text-transform: uppercase;
-  color: #000000;
+  text-shadow: 1px 1px 1px #000000;
   margin: 0;
 }
 .left-board .intro p {
@@ -91,9 +91,9 @@ a:focus {
   line-height: 16px;
   text-space: 80px;
   word-wrap: break-word;
-  color: #000000;
   padding-right: 160px;
   margin-top: 6px;
+  text-shadow: 1px 1px 1px #000000;
 }
 .left-board .intro ul {
   list-style: circle;
@@ -102,7 +102,7 @@ a:focus {
 .left-board .intro ul li {
   font-size: 13px;
   line-height: 16px;
-  color: #000000;
+  text-shadow: 1px 1px 1px #000000;
 }
 .right-board {
   width: 590px;
@@ -260,6 +260,7 @@ a:focus {
   padding-left: 10px;
 }
 .modal-dialog .modal-body .texture-text ul {
+  margin-top: 10px;
   list-style: circle;
   padding-left: 25px;
 }
