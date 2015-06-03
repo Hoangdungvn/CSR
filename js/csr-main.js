@@ -394,6 +394,12 @@ $(document).ready(function () {
 
     });
 
+    $('#myModal').on('hidden.bs.modal', function (e) {
+        $('.tile-content').hide();
+    })
+
+
+
 //When modal 2 show
     $('#myModal-2').on('shown.bs.modal', function (e) {
         //Get Tile ID that clicked
@@ -418,7 +424,9 @@ $(document).ready(function () {
 
 
     });
-
+    $('#myModal-2').on('hidden.bs.modal', function (e) {
+        $('.tile-content').hide();
+    })
 //When modal 3 show
     $('#myModal-3').on('shown.bs.modal', function (e) {
         ////Get Tile ID that clicked
@@ -439,7 +447,9 @@ $(document).ready(function () {
             change_sub_slider(item_number-1,3);
         });
      });
-
+    $('#myModal-3').on('hidden.bs.modal', function (e) {
+        $('.tile-content').hide();
+    })
 
     //Auto set height to content when page show
     $(".main-board").css('height', ($('body').height() - $(".main-contain").css('padding-top').replace('px', '') * 1 - $(".main-contain").css('padding-bottom').replace('px', '') * 1));
