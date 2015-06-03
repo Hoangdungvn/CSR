@@ -17,7 +17,8 @@
     <!-- iPad -->
     <gap:splash src="Default-Portrait.png" gap:platform="ios" width="768" height="1024" />
     <gap:splash src="Default-Landscape.png" gap:platform="ios" width="1024" height="768" />
-    <gap:plugin name="org.apache.cordova.inappbrowser" version="0.3.3" />
+    <gap:plugin name="org.apache.cordova.inappbrowser" version="0.5.2" />
+
 
 
     <preference name="DisallowOverscroll" value="true" />
