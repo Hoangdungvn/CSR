@@ -5,7 +5,7 @@ var sub_slides = new Array();
 var i=0;
 sub_slides[i] = new Array();
 sub_slides[i]['name'] = 'textured-alpine';
-sub_slides[i]['text'] = "Textured panels offer a truly unique residential facade solution with a depth of colour and intricate texture that is unmatched in the Australian market" +
+sub_slides[i]['text'] = "Textured panels offer a truly unique residential facade solution with a depth of colour and intricate texture that is unmatched in the Australian market:" +
 "<ul>" +
 "<li>Available in three natural tones; Alpine, Sandstone and Ebony</li>" +
 "<li>Pre-finished panels complement all colour schemes</li>" +
@@ -27,7 +27,7 @@ sub_slides[i]['slides'][1] = 'showcase-2.jpg';
 i++;
 sub_slides[i] = new Array();
 sub_slides[i]['name'] = 'icube-quartz';
-sub_slides[i]['text'] = "With an ultra-modern aesthetic,  iCube will look stunning on any residential feature façade;" +
+sub_slides[i]['text'] = "With an ultra-modern aesthetic,  iCube will look stunning on any residential feature façade:" +
 "<ul>" +
 "<li>Choice of two individual panels</li>" +
 "<li>Can be matched with a range of colour schemes</li>" +
@@ -59,7 +59,7 @@ sub_slides[i]['slides'][3] = 'showcase-4.jpg';
 i++;
 sub_slides[i] = new Array();
 sub_slides[i]['name'] = 'smooth-cream';
-sub_slides[i]['text'] = "An affordable walling solution, Smooth panels provide designers with a minimalist aesthetic & a commercial finish;" +
+sub_slides[i]['text'] = "An affordable walling solution, Smooth panels provide designers with a minimalist aesthetic & a commercial finish:" +
 "<ul>" +
 "<li>High level finish with visible horizontal joints</li>" +
 "<li>Modern walling choice</li>" +
@@ -75,7 +75,7 @@ sub_slides[i]['slides'][3] = 'showcase-4.jpg';
 i++;
 sub_slides[i] = new Array();
 sub_slides[i]['name'] = 'slimline-slate';
-sub_slides[i]['text'] = "The traditional Slimline design offers a distinctive look to any home as a full walling solution or when used as a feature;" +
+sub_slides[i]['text'] = "The traditional Slimline design offers a distinctive look to any home as a full walling solution or when used as a feature:" +
 "<ul>" +
 "<li>Available in Slate colour profile</li>" +
 "</ul>"
@@ -102,7 +102,7 @@ sub_slides[i]['slides'][2] = 'showcase-3.jpg';
 i++;
 sub_slides[i] = new Array();
 sub_slides[i]['name'] = 'woodgrain-teak';
-sub_slides[i]['text'] = "Woodgrain offers the same natural aesthetic of a timber solution but with the added benefit of a long-lasting, low maintenance solution;" +
+sub_slides[i]['text'] = "Woodgrain offers the same natural aesthetic of a timber solution but with the added benefit of a long-lasting, low maintenance solution:" +
 "<ul>" +
 "<li>Blends with any traditional colour scheme</li>" +
 "<li>Elegant addition to any home</li>" +
@@ -118,7 +118,7 @@ sub_slides[i]['slides'][2] = 'showcase-3.jpg';
 i++;
 sub_slides[i] = new Array();
 sub_slides[i]['name'] = 'urban-grey';
-sub_slides[i]['text'] = "A natural yet contemporary panel, Urban offers a raw cement look that is popular in residential design for those wanting to achieve an urban industrial feel to their home;" +
+sub_slides[i]['text'] = "A natural yet contemporary panel, Urban offers a raw cement look that is popular in residential design for those wanting to achieve an urban industrial feel to their home:" +
 "<ul>" +
 "<li>Available in Grey colour profile</li>" +
 "</ul>"
