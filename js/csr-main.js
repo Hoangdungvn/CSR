@@ -331,7 +331,7 @@ sub_slides_3[i]['slides'][1] = 'showcase-1.jpg';
 
 var sub_mySwiper = null;
 function change_sub_slider(slider_number,board_id) {
-    $('.tile-content').hide();
+     $('.tile-content').hide();
     //Change content when change active tile in top slider
     var slide_temp = sub_slides[slider_number];
 
@@ -341,12 +341,11 @@ function change_sub_slider(slider_number,board_id) {
     if(board_id==3){
         slide_temp = sub_slides_3[slider_number];
     }
-
+    $('.tile-content').show('slide', { direction: 'right' }, 500);
 
     $('.texture-text').html(slide_temp['text']);
     var xxx = Math.floor(Math.random() * 1000006) + 1;
-     $('.tmp-' + board_id).html('');
-     $('.tmp-' + board_id).html('<div class="sub-slider sub-slider-'+ xxx +' fl "></div>');
+      $('.tmp-' + board_id).html('<div class="sub-slider sub-slider-'+ xxx +' fl "></div>');
 
 
      if(slide_temp['slides'].length > 0){
@@ -359,7 +358,7 @@ function change_sub_slider(slider_number,board_id) {
         }
     }
 
-    $('.tile-content').show('slide', { direction: 'right' }, 500);
+
 
 
 
@@ -455,7 +454,7 @@ $(document).ready(function () {
         $(this).toggleClass('flip');
         setTimeout(function () {
             $('.click').removeClass('flip');
-        }, 1000);
+        }, 200);
     });
 
 
