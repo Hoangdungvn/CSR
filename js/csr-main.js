@@ -501,3 +501,9 @@ $(document).ready(function () {
 
 
 });
+
+$(function() {
+    $(document).on('click', '[data-external-url]', function(evt) {
+        window.open($(this).attr('data-external-url'), '_system');
+    });
+});
