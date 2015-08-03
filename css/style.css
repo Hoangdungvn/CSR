@@ -204,10 +204,6 @@ a:focus {
 .fr {
   float: right;
 }
-.modal.fade:not(.in).bottom .modal-dialog {
-  -webkit-transform: translate3d(0, 125%, 0);
-  transform: translate3d(0, 125%, 0);
-}
 .modal-dialog {
   width: 100%;
   max-width: 1024px;
@@ -217,7 +213,7 @@ a:focus {
   margin: 0 auto;
 }
 .modal-dialog .modal-content {
-  background: url("../images/header-background.png");
+  background: transparent;
   border: 0;
   box-shadow: none;
 }
@@ -269,6 +265,7 @@ a:focus {
 }
 .modal-open .modal {
   overflow: hidden;
+  background: rgba(0, 0, 0, 0.8);
 }
 .top-slide.swiper-container {
   height: 190px;
@@ -388,7 +385,7 @@ a:focus {
   border: none;
 }
 .modal-backdrop {
-  background-color: rgba(0, 0, 0, 0.8);
+  background: url("../images/header-background.png");
 }
 .modal.fade.in .modal-body {
   bottom: 0;
