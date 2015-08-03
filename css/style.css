@@ -115,7 +115,7 @@ a:focus {
   font-size: 12px;
   font-weight: normal;
   height: 23px;
-  z-index: 9999999999999999;
+  z-index: 999;
 }
 .constructive a {
   color: #000000;
