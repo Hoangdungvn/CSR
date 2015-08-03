@@ -104,6 +104,20 @@ a:focus {
   line-height: 16px;
   text-shadow: 1px 1px 1px #000000;
 }
+.left-board .constructive {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 2px 5px;
+  margin: 15px;
+  border: 1px solid black;
+  color: black;
+  font-size: 12px;
+  font-weight: normal;
+}
+.left-board .constructive a {
+  color: #000000;
+}
 .right-board {
   width: 590px;
   height: 100%;
@@ -204,6 +218,10 @@ a:focus {
 .fr {
   float: right;
 }
+.modal.fade:not(.in).bottom .modal-dialog {
+  -webkit-transform: translate3d(0, 125%, 0);
+  transform: translate3d(0, 125%, 0);
+}
 .modal-dialog {
   width: 100%;
   max-width: 1024px;
@@ -213,7 +231,7 @@ a:focus {
   margin: 0 auto;
 }
 .modal-dialog .modal-content {
-  background: transparent;
+  background: url("../images/header-background.png");
   border: 0;
   box-shadow: none;
 }
@@ -265,7 +283,6 @@ a:focus {
 }
 .modal-open .modal {
   overflow: hidden;
-  background: rgba(0, 0, 0, 0.8);
 }
 .top-slide.swiper-container {
   height: 190px;
@@ -385,7 +402,7 @@ a:focus {
   border: none;
 }
 .modal-backdrop {
-  background: url("../images/header-background.png");
+  background-color: rgba(0, 0, 0, 0.8);
 }
 .modal.fade.in .modal-body {
   bottom: 0;
