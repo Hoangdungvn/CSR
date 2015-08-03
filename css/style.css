@@ -104,7 +104,7 @@ a:focus {
   line-height: 16px;
   text-shadow: 1px 1px 1px #000000;
 }
-.left-board .constructive {
+.constructive {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -115,7 +115,7 @@ a:focus {
   font-size: 12px;
   font-weight: normal;
 }
-.left-board .constructive a {
+.constructive a {
   color: #000000;
 }
 .right-board {
