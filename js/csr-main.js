@@ -161,6 +161,15 @@ sub_slides[i]['slides'][0] = 'showcase-1.jpg';
 sub_slides[i]['slides'][1] = 'showcase-1.jpg';
 
 
+i++;
+sub_slides[i] = new Array();
+sub_slides[i]['text'] = "";
+sub_slides[i]['name'] = 'icube-onyx';
+sub_slides[i]['slides'] = new Array();
+sub_slides[i]['slides'][0] = 'showcase-1.jpg';
+sub_slides[i]['slides'][1] = 'showcase-2.jpg';
+sub_slides[i]['slides'][2] = 'showcase-3.jpg';
+
 
 
 
