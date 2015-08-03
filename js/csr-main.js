@@ -14,7 +14,8 @@ sub_slides[i]['text'] = "Textured panels offer a truly unique residential facade
 ;
 sub_slides[i]['slides'] = new Array();
 sub_slides[i]['slides'][0] = 'showcase-1.jpg';
-sub_slides[i]['slides'][1] = 'showcase-1.jpg';
+sub_slides[i]['slides'][1] = 'showcase-2.jpg';
+sub_slides[i]['slides'][2] = 'showcase-3.jpg';
 
 i++;
 sub_slides[i] = new Array();
@@ -245,7 +246,7 @@ sub_slides_2[i]['slides'] = new Array();
 sub_slides_2[i]['slides'][0] = 'showcase-1.jpg';
 sub_slides_2[i]['slides'][1] = 'showcase-2.jpg';
 
-i++;
+/*i++;
 sub_slides_2[i] = new Array();
 sub_slides_2[i]['name'] = 'rendaline';
 sub_slides_2[i]['text'] = "RendaLine™ is a monolithic facade system that incorporates all the advantages of lightweight construction with a flush-jointed texture coat finish. RendaLine™ is a strong, durable weatherproof facade system.";
@@ -268,9 +269,10 @@ sub_slides_2[i]['name'] = 'silhousette';
 sub_slides_2[i]['text'] = "TBA";
 sub_slides_2[i]['slides'] = new Array();
 sub_slides_2[i]['slides'][0] = 'no-image.jpg';
-sub_slides_2[i]['slides'][1] = 'no-image.jpg';
+sub_slides_2[i]['slides'][1] = 'no-image.jpg';*/
 
 
+/*
 var sub_slides_3 = new Array();
 var i=0;
 sub_slides_3[i] = new Array();
@@ -325,6 +327,7 @@ sub_slides_3[i]['text'] = "Cemintel™ Eaves Lining Sheets are specifically desi
 sub_slides_3[i]['slides'] = new Array();
 sub_slides_3[i]['slides'][0] = 'showcase-1.jpg';
 sub_slides_3[i]['slides'][1] = 'showcase-1.jpg';
+*/
 
 
 
@@ -339,7 +342,7 @@ function change_sub_slider(slider_number,board_id) {
         slide_temp = sub_slides_2[slider_number];
     }
     if(board_id==3){
-        slide_temp = sub_slides_3[slider_number];
+        //slide_temp = sub_slides_3[slider_number];
     }
     $('.tile-content').show('slide', { direction: 'right' }, 500);
 
@@ -408,7 +411,7 @@ $(document).ready(function () {
         //Try with owl carousel
         var tops = $('.top-carousel-2').owlCarousel({
             center: true,
-            items:9,
+            items:8,
              loop:true
         });
         tops.trigger('to.owl.carousel', [tile_id - 1,0]);
@@ -428,7 +431,7 @@ $(document).ready(function () {
         $('.tile-content').hide();
     })
 //When modal 3 show
-    $('#myModal-3').on('shown.bs.modal', function (e) {
+    /*$('#myModal-3').on('shown.bs.modal', function (e) {
         ////Get Tile ID that clicked
         var tile_id = $(e.relatedTarget).data('tile-id');
 
@@ -450,7 +453,7 @@ $(document).ready(function () {
     $('#myModal-3').on('hidden.bs.modal', function (e) {
         $('.tile-content').hide();
     })
-
+*/
     //Auto set height to content when page show
     $(".main-board").css('height', ($('body').height() - $(".main-contain").css('padding-top').replace('px', '') * 1 - $(".main-contain").css('padding-bottom').replace('px', '') * 1));
 
@@ -476,28 +479,28 @@ $(document).ready(function () {
     });
 
      $( "#board-2" ).on( 'swipeleft', function(){
-        $.mobile.changePage('#board-3', {transition: "slide", reverse: false}, true, true);
-    });
-
-
-     $( "#board-3" ).on( 'swipeleft', function(){
         $.mobile.changePage('#board-1', {transition: "slide", reverse: false}, true, true);
     });
 
 
+    // $( "#board-3" ).on( 'swipeleft', function(){
+    //    $.mobile.changePage('#board-1', {transition: "slide", reverse: false}, true, true);
+    //});
+
+
 
     $( "#board-1" ).on( 'swiperight', function(){
-        $.mobile.changePage('#board-3', {transition: "slide", reverse: true}, true, true);
+        $.mobile.changePage('#board-2', {transition: "slide", reverse: true}, true, true);
     });
 
     $( "#board-2" ).on( 'swiperight', function(){
         $.mobile.changePage('#board-1', {transition: "slide", reverse: true}, true, true);
     });
 
-
-    $( "#board-3" ).on( 'swiperight', function(){
-        $.mobile.changePage('#board-2', {transition: "slide", reverse: true}, true, true);
-    });
+    //
+    //$( "#board-3" ).on( 'swiperight', function(){
+    //    $.mobile.changePage('#board-2', {transition: "slide", reverse: true}, true, true);
+    //});
 
 
 });
