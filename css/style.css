@@ -62,10 +62,15 @@ a:focus {
 .ui-page-theme-a {
   background: #ffffff;
 }
+#board-1 .left-board {
+  background: url("../images/board-1-background.png") right top no-repeat;
+}
+#board-2 .left-board {
+  background: url("../images/board-2-background.png") right top no-repeat;
+}
 .left-board {
   width: 641px;
   height: 100%;
-  background: url("../images/left-background-2.png") right top no-repeat;
   float: left;
   top: 0;
   left: 0;
@@ -267,7 +272,7 @@ a:focus {
   background-color: #ffffff;
 }
 .modal-dialog .modal-body .tile-content .in-content {
-  padding: 25px 20px 20px 20px;
+  padding: 25px 20px 20px 25px;
 }
 .modal-dialog .modal-body .texture-text {
   width: 255px;
@@ -392,6 +397,11 @@ a:focus {
   margin-left: 15px;
   margin-right: 15px;
   margin-top: -3px;
+}
+.email-link:hover,
+.email-link:focus {
+  background: #000000;
+  color: white;
 }
 .modal-header .close {
   opacity: 1;

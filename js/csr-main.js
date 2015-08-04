@@ -37,7 +37,6 @@ sub_slides[i]['text'] = "With an ultra-modern aesthetic,  iCube will look stunni
 ;
 sub_slides[i]['slides'] = new Array();
 sub_slides[i]['slides'][0] = 'showcase-1.jpg';
-sub_slides[i]['slides'][1] = 'showcase-1.jpg';
 
 i++;
 sub_slides[i] = new Array();
@@ -45,7 +44,6 @@ sub_slides[i]['name'] = 'smooth-mocha';
 sub_slides[i]['text'] = "";
 sub_slides[i]['slides'] = new Array();
 sub_slides[i]['slides'][0] = 'showcase-1.jpg';
-sub_slides[i]['slides'][1] = 'showcase-1.jpg';
 
 i++;
 sub_slides[i] = new Array();
@@ -158,7 +156,6 @@ sub_slides[i]['text'] = "";
 sub_slides[i]['name'] = 'textured-ebony';
 sub_slides[i]['slides'] = new Array();
 sub_slides[i]['slides'][0] = 'showcase-1.jpg';
-sub_slides[i]['slides'][1] = 'showcase-1.jpg';
 
 
 i++;
@@ -205,7 +202,6 @@ sub_slides_2[i]['name'] = 'mosaic-cladding';
 sub_slides_2[i]['text'] = "Cemintel Mosaic™ combines a modern, geometric expressed joint aesthetic with the ease of installation of an advanced lightweight fibre cement panel and batten system, making it the ideal facade for the modern home.";
 sub_slides_2[i]['slides'] = new Array();
 sub_slides_2[i]['slides'][0] = 'showcase-1.jpg';
-sub_slides_2[i]['slides'][1] = 'showcase-1.jpg';
 
 i++;
 sub_slides_2[i] = new Array();
@@ -245,7 +241,6 @@ sub_slides_2[i]['name'] = 'headland-weatherboard';
 sub_slides_2[i]['text'] = "Headland Weatherboard has a sharp edged, linear recess. This profile is fixed in the traditional step pattern, making the installation of the external sheets simple. The 25mm overlap provided by Headland ensures fixings are concealed, resulting in a modern, attractive finish.";
 sub_slides_2[i]['slides'] = new Array();
 sub_slides_2[i]['slides'][0] = 'showcase-1.jpg';
-sub_slides_2[i]['slides'][1] = 'showcase-1.jpg';
 
 i++;
 sub_slides_2[i] = new Array();
@@ -368,18 +363,19 @@ function change_sub_slider(slider_number,board_id) {
                 $('.tmp-' + board_id +' .sub-slider-'+xxx).append('<div class="sub-slider-item slide-item swiper-slide"><img src="images/Board-'+ board_id + '/' + slide_temp['name'] + '/' + slide_temp['slides'][i] +'" alt=""/></div>');
             }
         }
+
+    }
+    if(slide_temp['slides'].length > 1) {
+        $('.sub-slider-' + xxx).owlCarousel({
+            loop: true,
+            video: true,
+            items: 1,
+            dots: true
+        });
     }
 
 
 
-
-
-      $('.sub-slider-'+xxx).owlCarousel({
-        loop:true,
-        video:true,
-        items:1,
-        dots: true
-    });
 }
 $(document).ready(function () {
     //When modal 1 show
@@ -516,6 +512,8 @@ $(document).ready(function () {
 
 $(function() {
     $(document).on('click', '[data-external-url]', function(evt) {
+        //evt.preventDefault();
         window.open($(this).attr('data-external-url'), '_system');
+        return false;
     });
 });
