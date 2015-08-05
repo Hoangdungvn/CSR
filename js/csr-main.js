@@ -24,6 +24,13 @@ sub_slides[i]['text'] = "";
 sub_slides[i]['slides'] = new Array();
 sub_slides[i]['slides'][0] = 'showcase-1.jpg';
 sub_slides[i]['slides'][1] = 'showcase-2.jpg';
+sub_slides[i]['text'] = "An affordable walling solution, Smooth panels provide designers with a minimalist aesthetic & a commercial finish:" +
+"<ul>" +
+"<li>High level finish with visible horizontal joints</li>" +
+"<li>Modern walling choice</li>" +
+"<li>Available in Cream, Mocha, Frappe and Latte colour profiles</li>" +
+"</ul>"
+;
 
 i++;
 sub_slides[i] = new Array();
@@ -44,6 +51,13 @@ sub_slides[i]['name'] = 'smooth-mocha';
 sub_slides[i]['text'] = "";
 sub_slides[i]['slides'] = new Array();
 sub_slides[i]['slides'][0] = 'showcase-1.jpg';
+sub_slides[i]['text'] = "An affordable walling solution, Smooth panels provide designers with a minimalist aesthetic & a commercial finish:" +
+"<ul>" +
+"<li>High level finish with visible horizontal joints</li>" +
+"<li>Modern walling choice</li>" +
+"<li>Available in Cream, Mocha, Frappe and Latte colour profiles</li>" +
+"</ul>"
+;
 
 i++;
 sub_slides[i] = new Array();
@@ -54,6 +68,13 @@ sub_slides[i]['slides'][0] = 'showcase-1.jpg';
 sub_slides[i]['slides'][1] = 'showcase-2.jpg';
 sub_slides[i]['slides'][2] = 'showcase-3.jpg';
 sub_slides[i]['slides'][3] = 'showcase-4.jpg';
+sub_slides[i]['text'] = "An affordable walling solution, Smooth panels provide designers with a minimalist aesthetic & a commercial finish:" +
+"<ul>" +
+"<li>High level finish with visible horizontal joints</li>" +
+"<li>Modern walling choice</li>" +
+"<li>Available in Cream, Mocha, Frappe and Latte colour profiles</li>" +
+"</ul>"
+;
 
 i++;
 sub_slides[i] = new Array();
@@ -97,6 +118,13 @@ sub_slides[i]['slides'] = new Array();
 sub_slides[i]['slides'][0] = 'showcase-1.jpg';
 sub_slides[i]['slides'][1] = 'showcase-2.jpg';
 sub_slides[i]['slides'][2] = 'showcase-3.jpg';
+sub_slides[i]['text'] = "Woodgrain offers the same natural aesthetic of a timber solution but with the added benefit of a long-lasting, low maintenance solution:" +
+"<ul>" +
+"<li>Blends with any traditional colour scheme</li>" +
+"<li>Elegant addition to any home</li>" +
+"<li>Available in the popular Teak or Oak colour profiles</li>" +
+"</ul>"
+;
 
 i++;
 sub_slides[i] = new Array();
@@ -149,14 +177,26 @@ sub_slides[i]['slides'] = new Array();
 sub_slides[i]['slides'][0] = 'showcase-1.jpg';
 sub_slides[i]['slides'][1] = 'showcase-2.jpg';
 sub_slides[i]['slides'][2] = 'showcase-3.jpg';
-
+sub_slides[i]['text'] = "Textured panels offer a truly unique residential facade solution with a depth of colour and intricate texture that is unmatched in the Australian market:" +
+"<ul>" +
+"<li>Available in three natural tones; Alpine, Sandstone and Ebony</li>" +
+"<li>Pre-finished panels complement all colour schemes</li>" +
+"<li>Offer a unique point of difference to any home</li>" +
+"</ul>"
+;
 i++;
 sub_slides[i] = new Array();
 sub_slides[i]['text'] = "";
 sub_slides[i]['name'] = 'textured-ebony';
 sub_slides[i]['slides'] = new Array();
 sub_slides[i]['slides'][0] = 'showcase-1.jpg';
-
+sub_slides[i]['text'] = "Textured panels offer a truly unique residential facade solution with a depth of colour and intricate texture that is unmatched in the Australian market:" +
+"<ul>" +
+"<li>Available in three natural tones; Alpine, Sandstone and Ebony</li>" +
+"<li>Pre-finished panels complement all colour schemes</li>" +
+"<li>Offer a unique point of difference to any home</li>" +
+"</ul>"
+;
 
 i++;
 sub_slides[i] = new Array();
@@ -166,7 +206,13 @@ sub_slides[i]['slides'] = new Array();
 sub_slides[i]['slides'][0] = 'showcase-1.jpg';
 sub_slides[i]['slides'][1] = 'showcase-2.jpg';
 sub_slides[i]['slides'][2] = 'showcase-3.jpg';
-
+sub_slides[i]['text'] = "With an ultra-modern aesthetic,  iCube will look stunning on any residential feature façade:" +
+"<ul>" +
+"<li>Choice of two individual panels</li>" +
+"<li>Can be matched with a range of colour schemes</li>" +
+"<li>Available in Quartz and Onyx colour profiles</li>" +
+"</ul>"
+;
 
 
 
