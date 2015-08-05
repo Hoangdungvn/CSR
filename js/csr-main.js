@@ -462,7 +462,7 @@ $(document).ready(function () {
         //Try with owl carousel
         var tops = $('.top-carousel-2').owlCarousel({
             center: true,
-            items:8,
+            items:9,
              loop:true
         });
         tops.trigger('to.owl.carousel', [tile_id - 1,0]);
